@@ -1,6 +1,6 @@
 name: Lint Test & Deploy
 
-on: workflow_dispatch
+on: push
 
 jobs:
     lint-tests:
