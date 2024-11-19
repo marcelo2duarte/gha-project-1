@@ -1,11 +1,9 @@
-name: Output information
-on: 
-   issues:
-     types: opened
+name: Handle issues
+on: issues
 
 jobs:
   event-info:
     runs-on: ubuntu-latest
     steps:
-        - name: Output Gihub context
-          run: echo "${{ toJson(github) }}"
+        - name: Output event details
+          run: echo "${{ toJson(github.event) }}"
